@@ -1,6 +1,9 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
+    <PreferenceCategory
+        app:title="@string/messages_header"
+        app:icon="@drawable/ic_baseline_message_24">
 
         <EditTextPreference
             app:key="signature"
@@ -17,7 +20,9 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/sync_header">
+    <PreferenceCategory
+        app:icon="@drawable/ic_baseline_sync_24"
+        app:title="@string/sync_header">
 
         <SwitchPreferenceCompat
             app:key="sync"
@@ -32,4 +37,20 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        app:icon="@drawable/ic_baseline_notifications_24"
+        app:title="Notifications">
+
+        <SeekBarPreference
+            app:key="volume_notifications"
+            app:title="Volume"
+            app:showSeekBarValue="true"
+            app:defaultValue="50"/>
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:title="Disable Notifications"
+            app:summaryOn="You will no longer receive notifications"
+            app:summaryOff="You will receive all notifications"/>
+
+    </PreferenceCategory>
 </PreferenceScreen>
