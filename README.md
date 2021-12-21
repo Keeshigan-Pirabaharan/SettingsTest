@@ -1,2 +1,2 @@
 # SettingsTest
-Settings Integration to Android App
+Settings Integration to Android App by CodePalace
